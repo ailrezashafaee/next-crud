@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from './components/Nav/Header'
 import ReduxProvider from './redux/provider'
+import SearchBar from './components/Searchbar/SearchBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +24,8 @@ export default function RootLayout({
           <header className='w-full'>
             <Header/>
           </header>
-          <main className='p-24'>
+          <main className='px-24 py-4'>
+            <SearchBar/>
             {children}
           </main>
         </ReduxProvider>

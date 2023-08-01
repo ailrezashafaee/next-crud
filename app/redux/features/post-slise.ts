@@ -17,10 +17,9 @@ const postsSlice = createSlice({
             localStorage.setItem('posts', JSON.stringify(newState.map((item) => item)));
             return newState;
         },
-
     },
-}
-);
+},
+); 
 const {reducer} = postsSlice;
 export const {deletePost} = postsSlice.actions;
-export default reducer; 
+export default reducer;

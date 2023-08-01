@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import postReducer from './features/post-slise';
+import filterReducer from './features/Filter-slice';
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
 
 const reducer = {
-    posts : postReducer
+    posts : postReducer,
+    filters : filterReducer
 };
 export const store = configureStore({
     reducer : reducer,
